@@ -23,7 +23,7 @@ void vApplicationIdleHook( void )
 // Task 1 정의
 void vTask1( void *pvParameters )
 {
-	const char *pcTaskName = "Task 1 is running\r\n";
+	const char *pcTaskName = "Task 1: 1 sec period\r\n";
 
 	for( ;; )
 	{
@@ -34,12 +34,12 @@ void vTask1( void *pvParameters )
 // Task 2 정의
 void vTask2( void *pvParameters )
 {
-	const char *pcTaskName = "Task 2 is running\r\n";
+	const char *pcTaskName = "Task 2: 2 sec period\r\n";
 
 	for( ;; )
 	{
 		console_print( pcTaskName );
-        vTaskDelay( 1000 );
+        vTaskDelay( 2000 );  // 과제 1: 주기를 2초로 변경
 	}
 }
 
